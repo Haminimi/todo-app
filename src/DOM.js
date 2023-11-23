@@ -94,6 +94,36 @@ export function displayProject(project, todoList, projectId) {
         }
     }
 
-    
+    //An expanded todo
+    const expandedTodo = document.createElement('div');
+    expandedTodo.classList.add('expanded-todo');
+
+    const descriptionContainer = document.createElement('div');
+    descriptionContainer.classList.add('description-container');
+
+    const descriptionTitle = document.createElement('p');
+    descriptionTitle.classList.add('description-title');
+    descriptionTitle.textContent = 'Description';
+
+    const description = document.createElement('p');
+    description.classList.add('todo-description');
+    description.setAttribute('data-project-id', projectId);
+    description.setAttribute('data-id', todoId);
+    description.textContent = todoDescription;
+    description.contentEditable = true;
+
+    const dueDateContainer = document.createElement('div');
+    dueDateContainer.classList.add('due-date-container');
+
+    const dueDateTitle = document.createElement('p');
+    dueDateTitle.classList.add('due-date-title');
+    dueDateTitle.textContent = 'Due Date';
+
+    const dueDate = document.createElement('p');
+    dueDate.classList.add('todo-due-date');
+    dueDate.setAttribute('data-project-id', projectId);
+    dueDate.setAttribute('data-id', todoId);
+    dueDate.textContent = todoDueDate;
+    dueDate.contentEditable = true;
     }
 }
