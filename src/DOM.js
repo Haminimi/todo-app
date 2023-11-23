@@ -40,4 +40,8 @@ export function displayProject(project, todoList, projectId) {
     projectHeader.appendChild(projectTitle);
     projectHeader.appendChild(projectHeaderButtons);
     projectContainer.appendChild(projectHeader);
+
+    function displayTodo(todoTitle, todoDescription, todoDueDate, todoPriority, todoStatus, todoId, todoExpandState) {
+        
+    }
 }
