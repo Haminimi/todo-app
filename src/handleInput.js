@@ -5,7 +5,6 @@ export function handleProjectTitleChange(title) {
     projects.forEach(project => {
             if (projectId === project.id) {
                 project.changeProjectTitle(title.innerText);
-                console.log(project);
             }
         });
     storeProjects();
@@ -20,7 +19,7 @@ export function handleTitleChange(title) {
             project.todoList.forEach(todo => {
                 if (todo.id === titleId) {
                     todo.changeTitle(title.innerText);
-                    console.log(project);
+
                 }
             })
         }

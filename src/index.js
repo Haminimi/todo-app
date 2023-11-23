@@ -60,8 +60,6 @@ export function renderPage() {
     deleteProjectButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             deleteProject(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -69,8 +67,6 @@ export function renderPage() {
     addButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             addNewTodo(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -78,8 +74,6 @@ export function renderPage() {
     expandButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handleExpandStateChangeToExpand(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -87,8 +81,6 @@ export function renderPage() {
     expandLessButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handleExpandStateChangeToShrink(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -96,8 +88,6 @@ export function renderPage() {
     checkBoxes.forEach(checkBox => {
         checkBox.addEventListener('click', (event) => {
             handleCheckBox(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -105,8 +95,6 @@ export function renderPage() {
     deleteButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             deleteTodo(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -116,8 +104,6 @@ export function renderPage() {
         title.addEventListener('input', (event) => {
             const field = event.target;
             handleProjectTitleChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
         })
     });
 
@@ -125,8 +111,6 @@ export function renderPage() {
         title.addEventListener('input', (event) => {
             const field = event.target;
             handleTitleChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
         })
     });
     
@@ -134,8 +118,6 @@ export function renderPage() {
         description.addEventListener('input', (event) => {
             const field = event.target;
             handleDescriptionChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
         })
     });
 
@@ -143,8 +125,6 @@ export function renderPage() {
         date.addEventListener('blur', (event) => {
             const field = event.target;
             handleDateChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     })
@@ -152,8 +132,6 @@ export function renderPage() {
     lowPriorityButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handlePriorityChangeToLow(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     })
@@ -161,8 +139,6 @@ export function renderPage() {
     highPriorityButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handlePriorityChangeToHigh(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     })
