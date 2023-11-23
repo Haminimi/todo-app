@@ -106,3 +106,144 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.project {
+    border-radius: 15px;
+    height: fit-content;
+    padding: 10px;
+    background-color: white;
+    border: 2.5px solid gainsboro;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.project-title {
+    width: 83%;
+    border-radius: 5px;
+}
+
+.project-title:focus,
+.todo-title:focus,
+.todo-description:focus,
+.todo-due-date:focus {
+    outline: 2px solid cornflowerblue;
+}
+
+.project-header-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 16%;
+}
+
+.project-delete-button,
+.add-new-todo {
+    font-size: 33px;
+}
+
+.todo {
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-top: 2px solid gainsboro;
+}
+
+.title-container {
+    width: 70%;
+}
+
+.title-header {
+    font-weight: bold;
+}
+
+.todo-title {
+    width: 100%;
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 5px;
+}
+
+.unexpanded-todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unexpanded-todo-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.expand-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.expanded-todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 10px;
+}
+
+.description-title,
+.priority-title,
+.due-date-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.todo-description,
+.todo-due-date {
+    border-radius: 5px;
+}
+
+.remaining-time-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.priority-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority-buttons-container {
+    display: flex;
+    width: 23%;
+    justify-content: space-evenly;
+}
+
+.priority-buttons {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid var(--button-color);
+}
+
+.selected-priority {
+    background-color: var(--button-color);
+    color: white;
+}
+
+.priority-icon-container {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    border-radius: 50px;
+}
