@@ -247,3 +247,37 @@ main {
     font-size: 19px;
     border-radius: 50px;
 }
+
+.new-project-button {
+    position: fixed;
+    bottom: 70px; 
+    right: 110px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: white;
+    height: 60px;
+    width: 250px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+footer {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 33px;
+    color: var(--text-color);
+}
+
+.fa-github {
+    color: var(--button-color);
+    font-size: 55px;
+    transition: 0.15s ease;
+}
+
+.fa-github:hover {
+    transform: scale(1.2);
+}
