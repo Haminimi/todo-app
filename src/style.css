@@ -83,3 +83,26 @@ main {
     padding-top: 20px;
     min-height: 70vh;
 }
+
+.no-projects-card {
+    background-color: white;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 26px;
+    border: 2.5px solid gainsboro;
+    border-radius: 15px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#no-projects-card-button {
+    position: unset;
+    height: 40px;
+    width: 100px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
