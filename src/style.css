@@ -74,3 +74,12 @@ header {
     height: 55px;
     align-self: center;
 }
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    padding-top: 20px;
+    min-height: 70vh;
+}
