@@ -30,3 +30,25 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
     isolation: isolate;
 }
+
+
+:root {
+    --background-color:  whitesmoke;
+    --project-color: white;
+    --text-color: darkslategray;
+    --button-color: #101820;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    user-select: none;
+    font-size: 27px;
+}
