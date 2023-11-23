@@ -27,3 +27,19 @@ export function handleTitleChange(title) {
     });
     storeProjects();
 }
+
+export function handleDescriptionChange(description) {
+    const projectId = description.getAttribute('data-project-id');
+    const descriptionId = description.getAttribute('data-id');
+
+    projects.forEach(project => {
+        if (projectId === project.id) {
+            project.todoList.forEach(todo => {
+                if (todo.id === descriptionId) {
+                    todo.changeDescription(description.innerText);
+                }
+            })
+        }
+    });
+    storeProjects();
+}
