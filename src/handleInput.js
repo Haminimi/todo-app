@@ -43,3 +43,18 @@ export function handleDescriptionChange(description) {
     });
     storeProjects();
 }
+
+export function handleDateChange(date) {
+    const projectId = date.getAttribute('data-project-id');
+    const dateId = date.getAttribute('data-id');
+
+    projects.forEach(project => {
+        if (projectId === project.id) {
+            project.todoList.forEach(todo => {
+                if (todo.id === dateId) {
+                    todo.changeDueDate(date.innerText);
+                }
+            })
+        }
+    });
+}
