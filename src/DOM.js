@@ -214,5 +214,29 @@ export function displayProject(project, todoList, projectId) {
         lowPriority.classList.add('selected-priority');
     }
 
+    const expandButtonContainer = document.createElement('div');
+    expandButtonContainer.classList.add('expand-button-container');
+
+    const expandButton = document.createElement('span');
+    expandButton.classList.add('material-symbols-outlined', 'expand-button');
+    expandButton.setAttribute('data-project-id', projectId);
+    expandButton.setAttribute('data-id', todoId);
+    expandButton.textContent = 'expand_more';
+
+    const expandLessButton = document.createElement('span')
+    expandLessButton.classList.add('material-symbols-outlined', 'expand-less-button');
+    expandLessButton.setAttribute('data-project-id', projectId);
+    expandLessButton.setAttribute('data-id', todoId);
+    expandLessButton.textContent = 'expand_less';
+
+    //Handle appearance of an expanded todo and change the button accordingly
+    if (todoExpandState === false) {
+        expandedTodo.style.display = 'none';
+        expandButtonContainer.appendChild(expandButton);
+    } else {
+        expandedTodo.style.display = 'flex';
+        expandButtonContainer.appendChild(expandLessButton);
+    }
+
     }
 }
