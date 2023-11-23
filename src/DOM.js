@@ -176,6 +176,43 @@ export function displayProject(project, todoList, projectId) {
         remainingTimeContainer.style.display = 'none';
     }
 
-    
+    const priorityParentContainer = document.createElement('div');
+    priorityParentContainer.classList.add('priority-parent-container');
+
+    const priorityContainer = document.createElement('div');
+    priorityContainer.classList.add('priority-container');
+
+    const priorityTitle = document.createElement('p');
+    priorityTitle.classList.add('priority-title');
+    priorityTitle.textContent = 'Priority'
+
+    const priorityText = document.createElement('p');
+    priorityText.classList.add('priority-text');
+    priorityText.textContent = todoPriority;
+
+    const priorityButtons = document.createElement('div');
+    priorityButtons.classList.add('priority-buttons-container');
+
+    const lowPriority = document.createElement('button');
+    lowPriority.classList.add('low-priority-button', 'priority-buttons');
+    lowPriority.setAttribute('data-project-id', projectId);
+    lowPriority.setAttribute('data-id', todoId);
+    lowPriority.textContent = 'Low';
+
+    const highPriority = document.createElement('button');
+    highPriority.classList.add('high-priority-button', 'priority-buttons');
+    highPriority.setAttribute('data-project-id', projectId);
+    highPriority.setAttribute('data-id', todoId);
+    highPriority.textContent = 'High';
+
+    //Style priority buttons based on a priority
+    if (todoPriority === 'High') {
+        highPriority.classList.add('selected-priority');
+        lowPriority.classList.remove('selected-priority');
+    } else if (todoPriority === 'Low') {
+        highPriority.classList.remove('selected-priority');
+        lowPriority.classList.add('selected-priority');
+    }
+
     }
 }
