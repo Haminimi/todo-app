@@ -278,3 +278,22 @@ export function displayProject(project, todoList, projectId) {
 
     main.appendChild(projectContainer);
 }
+
+
+export function displayNoProjectsCard() {
+    const noProjectsCard = document.createElement('div');
+    noProjectsCard.classList.add('no-projects-card');
+
+    const noProjectsMessage = document.createElement('p');
+    noProjectsMessage.classList.add('no-projects-message');
+    noProjectsMessage.textContent = 'Add a new project';
+
+    const newProjectButton = document.createElement('button');
+    newProjectButton.classList.add('new-project-button');
+    newProjectButton.setAttribute('id', 'no-projects-card-button');
+    newProjectButton.textContent = '+';
+
+    noProjectsCard.appendChild(noProjectsMessage);
+    noProjectsCard.appendChild(newProjectButton);
+    main.appendChild(noProjectsCard);
+}
