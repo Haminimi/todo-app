@@ -271,5 +271,10 @@ export function displayProject(project, todoList, projectId) {
         projectContainer.appendChild(todoItem);
     }
 
-    
+    //Display all todo items from a project's todo list
+    todoList.forEach(item => {
+        displayTodo(item.title, item.description, item.dueDate, item.priority, item.status, item.id, item.expanded);
+    })
+
+    main.appendChild(projectContainer);
 }
