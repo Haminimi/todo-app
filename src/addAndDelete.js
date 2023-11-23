@@ -22,3 +22,26 @@ export function deleteProject(event) {
     });
 
 }
+
+export function addNewTodo(event) {
+    const projectId = event.target.getAttribute('data-project-id');
+    
+        projects.forEach(project => {
+            if (projectId === project.id) {
+                const newEmptyTodo = new Todo('', '', '', 'Low', 'In progress');
+                project.todoList.push(newEmptyTodo);
+            }
+        });
+
+}
+
+export function deleteTodo(event) {
+    const projectId = event.target.getAttribute('data-project-id');
+    const todoId = event.target.getAttribute('data-id');
+
+    projects.forEach(project => {
+        if (projectId === project.id) {
+            project.todoList = project.todoList.filter(todo => todoId !== todo.id);
+        }
+    });
+}
