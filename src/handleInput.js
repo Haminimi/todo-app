@@ -115,3 +115,35 @@ export function handleCheckBox(event) {
         }
     })
 }
+
+export function handleExpandStateChangeToExpand(event) {
+    const projectId = event.target.getAttribute('data-project-id');
+    const todoId = event.target.getAttribute('data-id');
+
+    projects.forEach(project => {
+        if (projectId === project.id) {
+            project.todoList.forEach(todo => {
+                if (todo.id === todoId) {
+                    todo.changeExpandedToTrue();
+                }
+            })
+        }
+    })
+    storeProjects();
+}
+
+export function handleExpandStateChangeToShrink(event) {
+    const projectId = event.target.getAttribute('data-project-id');
+    const todoId = event.target.getAttribute('data-id');
+
+    projects.forEach(project => {
+        if (projectId === project.id) {
+            project.todoList.forEach(todo => {
+                if (todo.id === todoId) {
+                    todo.changeExpandedToFalse();
+                }
+            })
+        }
+    })
+    storeProjects();
+}
