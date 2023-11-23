@@ -58,3 +58,41 @@ export function handleDateChange(date) {
         }
     });
 }
+
+export function handlePriorityChangeToLow(event) {
+    const projectId = event.target.getAttribute('data-project-id');
+    const todoId = event.target.getAttribute('data-id');
+    
+    projects.forEach(project => {
+        if (projectId === project.id) {
+            project.todoList.forEach(todo => {
+                if (todo.id === todoId) {
+                    if (todo.priority === 'High') {
+                        todo.changePriorityToLow();
+                    } else {
+                        return;
+                    }
+                }
+            })
+        }
+    })
+}
+
+export function handlePriorityChangeToHigh(event) {
+    const projectId = event.target.getAttribute('data-project-id');
+    const todoId = event.target.getAttribute('data-id');
+    
+    projects.forEach(project => {
+        if (projectId === project.id) {
+            project.todoList.forEach(todo => {
+                if (todo.id === todoId) {
+                    if (todo.priority === 'Low') {
+                        todo.changePriorityToHigh();
+                    } else {
+                        return;
+                    }
+                }
+            })
+        }
+    })
+}
