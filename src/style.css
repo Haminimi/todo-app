@@ -52,3 +52,25 @@ body {
     user-select: none;
     font-size: 27px;
 }
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 15vh;
+    padding-left:40px;
+    font-size: 60px;
+    color: var(--text-color);
+    font-family: 'Montserrat', cursive;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-sticker {
+    width: 55px;
+    height: 55px;
+    align-self: center;
+}
