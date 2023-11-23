@@ -125,5 +125,57 @@ export function displayProject(project, todoList, projectId) {
     dueDate.setAttribute('data-id', todoId);
     dueDate.textContent = todoDueDate;
     dueDate.contentEditable = true;
+
+    //Display the remaining or overdue time based on the due date
+    const remainingTimeContainer = document.createElement('div');
+    remainingTimeContainer.style.display = 'none';
+    remainingTimeContainer.classList.add('remaining-time-container');
+    const remainingTimeTitle = document.createElement('div');
+    remainingTimeTitle.classList.add('remaining-time-title');
+
+    const targetDate = todoDueDate;
+    const potentialFormats = ['MM/dd/yyyy', 'yyyy-MM-dd', 'dd/MM/yyyy', 'yyyyMMdd', 'ddMMyyyy', 'MMddyyyy', 'yyyy MM dd', 'MM dd yyyy', 'dd MM yyyy'];
+    
+    let parsedDate;
+    for (const format of potentialFormats) {
+        parsedDate = parse(targetDate, format, new Date());
+
+        if (!isNaN(parsedDate.getTime())) {
+            break;
+        }
+    }
+
+    if (!isNaN(parsedDate.getTime())) {
+        const currentDate = new Date();
+        const daysDifference = differenceInDays(parsedDate, currentDate);
+
+        const remainingTime = document.createElement('p');
+        remainingTime.classList.add('remaining-time');
+
+        if (todoStatus === 'Done') {
+            remainingTime.textContent = '';
+            remainingTimeTitle.textContent = '';
+        } else {
+            if (daysDifference >= 0) {
+                remainingTime.textContent = daysDifference;
+                remainingTimeTitle.textContent = 'Days Remaining';
+                remainingTimeContainer.appendChild(remainingTimeTitle);
+                remainingTimeContainer.appendChild(remainingTime);
+                remainingTimeContainer.style.display = 'block';
+            } else {
+                remainingTime.textContent = Math.abs(daysDifference);
+                remainingTimeTitle.textContent = 'Overdue Days 😭';
+                remainingTimeContainer.appendChild(remainingTimeTitle);
+                remainingTimeContainer.appendChild(remainingTime);
+                remainingTimeContainer.style.display = 'block';
+            }
+
+
+        }
+    } else {
+        remainingTimeContainer.style.display = 'none';
+    }
+
+    
     }
 }
