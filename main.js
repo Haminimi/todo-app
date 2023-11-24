@@ -16501,7 +16501,6 @@ function handleProjectTitleChange(title) {
     projects.forEach(project => {
             if (projectId === project.id) {
                 project.changeProjectTitle(title.innerText);
-                console.log(project);
             }
         });
     storeProjects();
@@ -16516,7 +16515,7 @@ function handleTitleChange(title) {
             project.todoList.forEach(todo => {
                 if (todo.id === titleId) {
                     todo.changeTitle(title.innerText);
-                    console.log(project);
+
                 }
             })
         }
@@ -16706,8 +16705,6 @@ function renderPage() {
     deleteProjectButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             deleteProject(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -16715,8 +16712,6 @@ function renderPage() {
     addButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             addNewTodo(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -16724,8 +16719,6 @@ function renderPage() {
     expandButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handleExpandStateChangeToExpand(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -16733,8 +16726,6 @@ function renderPage() {
     expandLessButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handleExpandStateChangeToShrink(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -16742,8 +16733,6 @@ function renderPage() {
     checkBoxes.forEach(checkBox => {
         checkBox.addEventListener('click', (event) => {
             handleCheckBox(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -16751,8 +16740,6 @@ function renderPage() {
     deleteButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             deleteTodo(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     });
@@ -16762,8 +16749,6 @@ function renderPage() {
         title.addEventListener('input', (event) => {
             const field = event.target;
             handleProjectTitleChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
         })
     });
 
@@ -16771,8 +16756,6 @@ function renderPage() {
         title.addEventListener('input', (event) => {
             const field = event.target;
             handleTitleChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
         })
     });
     
@@ -16780,8 +16763,6 @@ function renderPage() {
         description.addEventListener('input', (event) => {
             const field = event.target;
             handleDescriptionChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
         })
     });
 
@@ -16789,8 +16770,6 @@ function renderPage() {
         date.addEventListener('blur', (event) => {
             const field = event.target;
             handleDateChange(field);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     })
@@ -16798,8 +16777,6 @@ function renderPage() {
     lowPriorityButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handlePriorityChangeToLow(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     })
@@ -16807,8 +16784,6 @@ function renderPage() {
     highPriorityButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             handlePriorityChangeToHigh(event);
-            console.log(projects);
-            console.log(retrievedProjects);
             renderPage();
         })
     })
