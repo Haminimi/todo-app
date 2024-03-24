@@ -1,4 +1,5 @@
 # Todo App ✅
+![Screenshot of the Todo App.](/screenshot.png)
 ## Description
 The app provides a full task management experience with all the basic functionalities for a Todo app. Users can organize their tasks by projects, rename them, add as many new ones, or delete projects. Inside a project, there are many options for a user to manipulate tasks, including adding new ones, deleting them, handling titles, descriptions, due dates and priorities. Every change made by a user is stored in the local storage, enabling the maintenance of tasks across sessions. [The project](https://www.theodinproject.com/lessons/node-path-javascript-todo-list) is a part of [The Odin Project](https://www.theodinproject.com/dashboard)'s curriculum. The Odin Project provides a high quality web development education maintained by an open source community.
 ## Live Preview
@@ -18,10 +19,9 @@ The [Todo App](https://haminimi.github.io/todo-app/) built by [me](https://githu
 - Vanilla CSS
 
 **Tools**
-- Git
-- npm
-- Webpack
 - Visual Studio Code
+- Git
+- Webpack
 ## Covered Topics
 **This section mentions the main topics covered during project work and prior lessons**
 - OOP
@@ -40,5 +40,4 @@ The project was great fun, and I am satisfied with the final outcome. In the les
 - [Exercism](https://exercism.org/profiles/Haminimi)
 - [LeetCode](https://leetcode.com/Haminimi/)
 - Email: haminimi.dev@gmail.com
-- LinkedIn: A profile will be available at the time I am job ready
 ## Happy coding!
