@@ -35,9 +35,4 @@ The project was great fun, and I am satisfied with the final outcome. In the les
 ## Credits
 - Sticker used in the header is one of the [To do list icons created by Paul J. - Flaticon](https://www.flaticon.com/free-icons/to-do-list)
 - Sticker used for the favicon image is one of the [Correct icons created by Elite Art - Flaticon](https://www.flaticon.com/free-icons/correct)
-## Author
-- [GitHub](https://github.com/Haminimi)
-- [Exercism](https://exercism.org/profiles/Haminimi)
-- [LeetCode](https://leetcode.com/Haminimi/)
-- Email: haminimi.dev@gmail.com
 ## Happy coding!
